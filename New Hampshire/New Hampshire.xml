@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20260210</pubdate>
+                <title>NH DOT Roads</title>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>NH Department of Transportation, Bureau of Planning &amp; Community Assistance</publish>
+                </pubinfo>
+                <othercit>NHDOT 2026 Quarterly Snapshot</othercit>
+                <onlink>https://granit24a.sr.unh.edu/hosting/rest/services/Hosted/GV_BaseLayers/FeatureServer/18</onlink>
+                <onlink>https://ftp.granit.unh.edu/GRANIT_Data/Vector_Data/Transportation_Networks/d-roads/Roads_DOT.zip</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Statewide dataset containing the location of state, local and selected private roads and their associated attributes, including road names. For attribute data dictionary, see the file RDIUserGuide.pdf.</abstract>
+            <purpose>The data may be used to map the statewide road network, and/or to query for physical and administrative features of individual road segments.</purpose>
+            <supplinf>Data distribution tile: statewide NH Public Roads represents the most frequently distributed dataset. Additional transportation-related datasets may be available directly from NHDOT.</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20260210</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>NHDOT road network as of February 10, 2026</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>Quarterly</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-72.593213</westbc>
+                <eastbc>-70.675318</eastbc>
+                <northbc>45.28568</northbc>
+                <southbc>42.693946</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Transportation Networks</themekey>
+                <themekey>State Roads</themekey>
+                <themekey>Road Network</themekey>
+                <themekey>Private Roads</themekey>
+                <themekey>Roads</themekey>
+                <themekey>Road Inventory</themekey>
+                <themekey>Transportation</themekey>
+                <themekey>Public Roads</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>transportation</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>New Hampshire</placekey>
+                <placekey>New England</placekey>
+                <placekey>United States</placekey>
+                <placekey>Northeast</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>None</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NHDOT Bureau of Planning &amp; Community Assistance</cntorg>
+                    <cntper>Glenn L Davison, PE</cntper>
+                </cntorgp>
+                <cntpos>GIS Project Manager</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>NH Department of Transportation, Bureau of Planning &amp; Community Assistance</address>
+                    <address>PO Box 483, 7 Hazen Drive</address>
+                    <city>Concord</city>
+                    <state>NH</state>
+                    <postal>03301-0483</postal>
+                </cntaddr>
+                <cntvoice>(603)271-7145</cntvoice>
+                <cntfax>(603)271-8093</cntfax>
+                <cntemail>gdavison@dot.state.nh.us</cntemail>
+                <hours>8 AM to 4:30 PM</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>New Hampshire Department of Transportation (NHDOT)</datacred>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Attributes are collected by field inspection and verified by logical and visual validation.</attraccr>
+        </attracc>
+        <logic>The data set was generated from a centerline base layer that is part of a geodatabase topology</logic>
+        <complete>These data represent statewide coverage, although they are continually being updated and enhanced.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>The coordinate data were generated from standard USGS 1:24,000/1:25,000-scale Digital Line Graphs, augmented by and improved with data collected by GPS and post-processed. They meet National Map Accuracy standards.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>Vertical positional accuracy is not assessed.</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>19900101</pubdate>
+                        <title>Digital Line Graphs - 1:24,000/1:25,000</title>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>CD-ROM</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <rngdates>
+                            <begdate>19530101</begdate>
+                            <enddate>19900101</enddate>
+                        </rngdates>
+                    </timeinfo>
+                    <srccurr>publication date</srccurr>
+                </srctime>
+                <srccitea>Digital Line Graphs - 1:24,000/1:25,000</srccitea>
+                <srccontr>The DLG files provided the basic coordinate information for the statewide road network.</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Roadway centerline for the state system has been re-aligned to the state's 2010 high-resolution ortho imagery (1 foot resolution) or updated using sub-meter GPS coordinates. Local roadway network is being updated to the 2010 imagery. Road names are being coordinating with New Hampshire Department of Safety, Emergency Management E-911. Current Projection NH State Plane 83</procdesc>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Complete chain</sdtstype>
+                <ptvctcnt>112796</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <overview>
+            <eaover>For a complete description of the attribute information, see the file 2018RDIUserGuide_Oct30.pdf</eaover>
+            <eadetcit>See 2018RDIUserGuide_Oct30.pdf</eadetcit>
+        </overview>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Earth Systems Research Center, University of New Hampshire</cntorg>
+                    <cntper>GRANIT Database Manager</cntper>
+                </cntorgp>
+                <cntpos>GRANIT Database Manager</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Morse Hall, University of New Hampshire</address>
+                    <city>Durham</city>
+                    <state>NH</state>
+                    <postal>03824</postal>
+                </cntaddr>
+                <cntvoice>603-862-1214</cntvoice>
+                <cntfax>603-862-0188</cntfax>
+                <cntemail>granit@unh.edu</cntemail>
+                <hours>9 AM - 5 PM, EST</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>Esri shapefile</formname>
+                    <formvern>10.8</formvern>
+                    <transize>316</transize>
+                </digtinfo>
+                <digtopt>
+                    <offoptn>
+                        <offmedia>CD-ROM</offmedia>
+                    </offoptn>
+                </digtopt>
+            </digform>
+            <fees>No charge when downloaded from website. Cost of reproduction for provision on CD/DVD or other media.</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20260210</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NHDOT Bureau of Planning &amp; Community Assistance</cntorg>
+                    <cntper>Glenn L Davison, PE</cntper>
+                </cntorgp>
+                <cntpos>GIS Project Manager</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>PO Box 483, 7 Hazen Drive</address>
+                    <address>NH Department of Transportation, Bureau of Planning &amp; Community Assistance</address>
+                    <city>Concord</city>
+                    <state>NH</state>
+                    <postal>03301-0483</postal>
+                </cntaddr>
+                <cntvoice>(603)271-7145</cntvoice>
+                <cntfax>(603)271-8093</cntfax>
+                <cntemail>gdavison@dot.state.nh.us</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

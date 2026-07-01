@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20230914</pubdate>
+                <title>VT Annual Average Daily Traffic (AADT) - 2022</title>
+                <onlink>https://maps.vtrans.vermont.gov/arcgis/rest/services/Master/General/FeatureServer/74</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Annual average daily traffic - 2022Stewards: Information Technology, Data Owner:  Traffic Research</abstract>
+        </descript>
+        <spdom>
+            <bounding>
+                <westbc>-73.7177</westbc>
+                <eastbc>-71.3886</eastbc>
+                <northbc>45.0959</northbc>
+                <southbc>42.5279</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>2022</themekey>
+                <themekey>Traffic</themekey>
+                <themekey>average</themekey>
+                <themekey>isothemeTrans</themekey>
+                <themekey>subthemeRoad</themekey>
+                <themekey>VT</themekey>
+                <themekey>AADT</themekey>
+            </theme>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>For reference use only. Data does not represent a legal description of VTrans' assets. Disclaimer: Users must assume responsibility in determining the usability of this data for their purposes. Digital maps retain the accuracy of their source materials. With respect to documents available from this server (map service), neither the State of Vermont nor any of it's employees make any warranty, express or implied, including the warranties of merchantability and fitness for a particular purpose, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Users should use caution when overlaying other data sets and should not make legally binding decisions from this data. To avoid the risk of misinterpretation, invalid results, and erroneous conclusions, users must consider original map scale, collection methodology, currency of data, and any other conditions specific to every data element and each dataset as a whole. Potential users are advised to consult with VTrans to gain an understanding of the inherent limitations of this data set and its scope of inference. Also, the user must be aware that errors and conditions originating from physical sources involved in developing a dataset may be reflected in the data and that the digital processing performed during preparation, storage, and transmission of the dataset may have exacerbated such errors and/or introduced additional ones.</useconst>
+    </idinfo>
+    <metainfo>
+        <metd>20230914</metd>
+        <metc>
+            <cntinfo>
+                <!--no contact person or organization name available-->
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
