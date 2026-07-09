@@ -7,7 +7,7 @@ address = st.text_input("Address")
 
 state = st.selectbox(
     "State",
-    ["AK","AZ","AR","CA","CO","CT","DE","FL","GA","ID","IL","IN","KY","LA","MA","MD","ME","MI","MN","NC","NH","NJ","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VA","VT","WA","WI","WV"] 
+    ["AK","AZ","AR","CA","CO","CT","FL","GA","ID","IL","IN","MD","ME","MI","MN","NC","NH","NJ","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VA","VT","WA","WI","WV"] 
 )
 
 num_points = st.slider(
