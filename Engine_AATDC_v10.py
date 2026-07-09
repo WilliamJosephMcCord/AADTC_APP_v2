@@ -11,14 +11,13 @@ import json
 BASE_DIR = Path(__file__).resolve().parent
 
 # FILE PATHS
-EXCEL_FILE = BASE_DIR / "States From Excel" / "AADTC_annualized_statistics.xlsx"
+EXCEL_FILE = BASE_DIR / "AADTC_annualized_statistics_new.xlsx"
 OUTPUT_MAP = "traffic_map.html"
 
 # STATE CONFIGS
 
 STATE_CONFIGS = {
     "FL": {"type": "shapefile", "shapefile": BASE_DIR / "Florida" / "Florida.shp"},
-    "AR": {"type": "shapefile", "shapefile": BASE_DIR / "Arkansas" / "Arkansas.shp"},#send this to its own excel sheet
     "CT": {"type": "shapefile", "shapefile": BASE_DIR / "Connecticut" / "Connecticut.shp"},
     "CO": {"type": "shapefile", "shapefile": BASE_DIR / "Colorado" / "Colorado.shp"},
     "DE": {"type": "shapefile", "shapefile": BASE_DIR / "Delaware" / "Delaware.shp"},
@@ -56,7 +55,8 @@ STATE_CONFIGS = {
     "SC": {"type": "excel", "sheet": "South Carolina", "projected": False},
     "TN": {"type": "excel", "sheet": "Tennessee", "projected": False},
     "TX": {"type": "excel", "sheet": "Texas", "projected": False},
-    "WV": {"type": "excel", "sheet": "West Virginia", "projected": False}
+    "WV": {"type": "excel", "sheet": "West Virginia", "projected": False},
+    "AR": {"type": "excel", "sheet": "Arkansas", "projected": False}  # Added Arkansas as an Excel type
 }
 
 # CLEANING FUNCTION 
