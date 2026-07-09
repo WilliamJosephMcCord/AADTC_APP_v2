@@ -1,5 +1,5 @@
 import streamlit as st
-from Engine_AATDC_v6 import create_map
+from Engine_AATDC_v10 import create_map
 
 st.title("AADT Traffic Search")
 
@@ -7,7 +7,7 @@ address = st.text_input("Address")
 
 state = st.selectbox(
     "State",
-    ["AK","AZ","CA","CO","FL","GA","ID","IL","MD","MI","NC","NH","NV","NY","OH","OK","OR","RI","SC","SD","TX","VT","WA","WI","WV"] 
+    ["AK","AZ","AR","CA","CO","CT","DE","FL","GA","ID","IL","IN","KY","LA","MA","MD","ME","MI","MN","NC","NH","NJ","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","VA","VT","WA","WI","WV"] 
 )
 
 num_points = st.slider(
