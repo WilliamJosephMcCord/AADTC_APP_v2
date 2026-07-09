@@ -4,3 +4,4 @@ geopandas
 folium
 geopy
 pyproj
+openpyxl
