@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <descript>
+            <abstract>This layer consists of Average Daily Traffic (ADT) volumes with Vehicle Classification Data for most recent years, on Interstate, Arterial and Primary Routes. It also includes a list of each Interstate and Primary highway segment with the estimated Annual Average Week Day Traffic (AAWDT) for that segment. It includes data from 1986 to 2022. Please note that traffic volume data here are bidirectional volume. The latest directional and bidirectional traffic volume data are also available in TMPD’s Pathways for Planning (P4P), https://vdotp4p.com.Data Updated: Feb 2024 ADT Quality Codes:                   1 A Average of Complete Continuous Data                   2 B Average of Selected Continuous Count Data                   6 F Factored Short Term Traffic Count Data                   7 G Factored Short Term Traffic Count Data with Growth Element                   8 H Historical Estimate                  13 M Manual Uncounted Estimate                  14 N AADT of Similar Neighboring Traffic Link                  15 O Provided By External Source                  18 R Unfactored 24 Hour Traffic Count                  20 T ITE Trip Generation Estimate                  24 X Not AvailableClass Quality Codes:                   1 A Average of Complete Continuous Data                   2 B Average of Selected Continuous Count Data                   3 C Short Term Classified Traffic Count                   4 D Corrected Short Term Classified Traffic Count                   6 F Factored Short Term Traffic Count Data                   7 G Corrected Factored Short Term Traffic Count Data                   8 H Historical Estimate                  13 M Mass Collective Average                  14 N Classification of Similar Neighboring Traffic Link                  24 X Not Available Pop Up ConfigurationAverage Daily Traffic: {ADT}-----------------------------------------------------------Route Name: {ROUTE_COMMON_NAME}Route Type: {RTE_TYPE_CD}Begin Location: {START_LABEL}End Location: {END_LABEL}Average Annual Weekday Traffic: {AAWDT}View in attribute table for more details...</abstract>
+            <purpose>This service displays Average Daily Traffic Volume on Virginia roads. This feature service will be updated annually to display the latest official available data. Please note that traffic volume data here are bidirectional volume. The latest directional and bidirectional traffic volume data are also available in TMPD’s Pathways for Planning (P4P), https://vdotp4p.com.</purpose>
+        </descript>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>VDOT</themekey>
+                <themekey>   Virginia</themekey>
+                <themekey>   Transportation</themekey>
+                <themekey>   Traffic Volume</themekey>
+                <themekey>   ADT</themekey>
+                <themekey>   AAWDT</themekey>
+            </theme>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>Disclaimer: Any person, organization, firm, corporation or other entity using this database does so at its own risk. The Virginia Department of Transportation accepts no liability for any loss suffered by any person, organization, firm, corporation, or other entity from the use of the information in this database. In addition, the Virginia Department of Transportation does not guarantee system availability and is not responsible for any losses associated with any system unavailability. VDOT's digital data files are for use in performing the official business of the Commonwealth of Virginia. VDOT Divisions set all policy on the allowable uses of this data. The representations of VDOT business data contained within are believed to be correct. This data is provided without any guarantee of accuracy, timeliness or completeness. No business decisions should be made based on this data without first validating its accuracy against the official Source System of Record (SSR). Users of this data are solely responsible for determining if it is appropriate for their application. Please report errors and omissions directly to the appropriate VDOT Division data owner.</useconst>
+        <datacred>VDOT Spatial Intelligence Group</datacred>
+    </idinfo>
+    <metainfo>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

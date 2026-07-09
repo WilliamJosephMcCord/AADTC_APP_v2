@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20190816</pubdate>
+                <title>MaineDOT Public Roads</title>
+                <onlink>https://gis.maine.gov/arcgis/rest/services/dot/MaineDOT_OpenData/MapServer/52</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Represents public road centerlines in the state of Maine.  Created by Maine Department of Transportation using MaineDOT's basemap linework managed in METRANS, MaineDOT's Linear Referencing System (LRS).  MaineDOT_Public_Roads includes the most commonly-used attributes such as traffic volumes, federal functional classifications, jurisdiction, priority and more.  This is updated regularly through a service, although the AGOL &amp;quot;Updated&amp;quot; date may only reflect the date this feature layer was created.Route and Road names:  While MaineDOT's record of  &amp;quot;Streetname&amp;quot; attribute is included and matches the official NG911 names whenever possible, the official road names are reflected in the NG911  (a.k.a. E911) data available from the Maine Geolibrary  While multiple route designations (US Route 202, State Route 27, etc.)  may be co-located on any given road, this dataset only shows the &amp;quot;primary&amp;quot; route.This dataset is designed for use in applications within MaineDOT.</abstract>
+            <purpose>Provided for MaineDOT and partner organizations for management and improvement of transportation infrastructure and systems._</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20190814</begdate>
+                </rngdates>
+            </timeinfo>
+            <current>Maine</current>
+        </timeperd>
+        <status>
+            <progress>In work</progress>
+            <update>Weekly</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-71.04661758188493</westbc>
+                <eastbc>-66.95201525616594</eastbc>
+                <northbc>47.359987975861415</northbc>
+                <southbc>43.06728429011808</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>mainedot</themekey>
+                <themekey>transportation</themekey>
+                <themekey>MEDOTPUBRDS</themekey>
+                <themekey>MDOTPUBRDS</themekey>
+                <themekey>Highways</themekey>
+                <themekey>Roads</themekey>
+                <themekey>Centerlines</themekey>
+                <themekey>Maine</themekey>
+                <themekey>Roadways</themekey>
+                <themekey>Routes</themekey>
+                <themekey>Travel</themekey>
+                <themekey>Traffic</themekey>
+                <themekey>Streets</themekey>
+                <themekey>MaineDOT</themekey>
+                <themekey>roads</themekey>
+            </theme>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>The information depicted in this GIS layer is the result of digital analyses performed on a database consisting of information from a variety of governmental and other credible sources. The accuracy of the information presented is limited to the collective accuracy of the database on the date of the analysis. The information is believed accurate and reasonable efforts have been made to ensure the accuracy of the data. However, the (MEDOT) Maine Department of Transportation expressly disclaims responsibility for damages or liability that may arise from use of this data. </useconst>
+        <datacred>MaineDOT Results and Information Office</datacred>
+    </idinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Maine_Public_Roads</enttypl>
+                <enttypd>Centerlines of Maine's public roadways.</enttypd>
+                <enttypds>MaineDOT</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>aadt_type</attrlabl>
+                <attrdef>Indicates whether AADT was estimated or based on an actual count.</attrdef>
+                <attrdefs>MaineDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>priority</attrlabl>
+                <attrdef>Priority level (1-4) assigned to all state roadways.  Non-state public roadways are assigned a priority of 6.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>sh_sa_ir</attrlabl>
+                <attrdef>Reflects state highway designation for state highways, state-aid designation number for state-aid roads and inventory road number for all other roadways (does not reflect route numbers).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>faadt</attrlabl>
+                <attrdef>Factored Annual Average Daily Traffic  (AADT) that has been updated to a current year based on the change of traffic volumes measured at permanent traffic counting stations.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>fedfunccls</attrlabl>
+                <attrdef>Federal functional classification.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>fed_urbrur</attrlabl>
+                <attrdef>Federal Urban/Rural status of the roadway.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>capacity</attrlabl>
+                <attrdef>Hourly vehicle capacity in number of vehicles.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>jurisdictn</attrlabl>
+                <attrdef>Jurisdiction indicates entity responsible for the roadway.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>link_id</attrlabl>
+                <attrdef>Link ID also known as Element ID.  Internal identifier in MaineDOT's Linear Referencing System (LRS) identifier for road sections between nodes.  Subject to change without notice.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>nhs_status</attrlabl>
+                <attrdef>National Highway System status.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>num_lanes</attrlabl>
+                <attrdef>Total number of lanes along the roadway segment.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>offic_miles</attrlabl>
+                <attrdef>Indicates whether segment is considered "Official Mileage" when summarizing miles for federal reporting.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>prim_bmp</attrlabl>
+                <attrdef>Begin mile point along the primary route.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>prirtecode</attrlabl>
+                <attrdef>Primary route code.  Many places along Maine's public roads have more than one route designation.  Only one route on any given segment is designated as the "Primary" route.  Primary is determined by the lowest numbered Interstate Route, then US Route, then State Route present.  An "inventory" route has been assigned to any roadway where no numbered route exists.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>prim_emp</attrlabl>
+                <attrdef>End mile point along the primary route.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>prirtename</attrlabl>
+                <attrdef>Primary route name.  Many places along Maine's public roads have more than one route designation.  Only one route on any given segment is designated as the "Primary" route.  Primary is determined by the lowest numbered Interstate Route, then US Route, then State Route present.  An "inventory" route has been assigned to any roadway where no numbered route exists.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>segment_id</attrlabl>
+                <attrdef>Segment identifier assigned in extraction/segmentation process (values subject to changes with every refresh).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>Speed Limit</attrlabl>
+                <attrdef>Speed limit (MPH).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>speedsrc</attrlabl>
+                <attrdef>Indicates how speed limit was derived (posted or unposted).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>st_urbrur</attrlabl>
+                <attrdef>State urban/rural status.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>strtname</attrlabl>
+                <attrdef>Last recorded road name to MaineDOT (see E911/NG911 roads data for official road names).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>townname</attrlabl>
+                <attrdef>Name of minor civil division (town, city, township, plantation, etc.) in-which the roadway is located.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>towncode</attrlabl>
+                <attrdef>Unique, five digit code for every minor civil division (MCD) in Maine.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>cntyname</attrlabl>
+                <attrdef>County name.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>cnty_no</attrlabl>
+                <attrdef>County number (a.k.a. county code).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>surfc_type</attrlabl>
+                <attrdef>Roadway surface type.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>dot_region</attrlabl>
+                <attrdef>Number of MaineDOT region in-which feature is located.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>dot_region_name</attrlabl>
+                <attrdef>Name of MaineDOT region in-which feature is located.</attrdef>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20190816</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Maine Department of Transportation</cntorg>
+                </cntorgp>
+                <cntpos>METRANS Administrator</cntpos>
+                <cntaddr>
+                    <addrtype>unknown</addrtype>
+                    <city>Augusta</city>
+                    <state>Maine</state>
+                    <postal>04333</postal>
+                </cntaddr>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
