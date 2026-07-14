@@ -120,6 +120,10 @@ STATE_CONFIGS = {
         "type": "shapefile",
         "shapefile": BASE_DIR / "Minnesota" / "Minnesota.shp"
     },
+    "MS": {
+        "type": "shapefile",
+        "shapefile": BASE_DIR / "Mississippi" / "Mississippi.shp"
+    },
     "NH": {
         "type": "shapefile",
         "shapefile": (
