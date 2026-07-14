@@ -343,7 +343,9 @@ def find_aadt_field(data):
         "CUR_AADT",
         "ADT",
         "FAADT",
-        "CURRENT_AA"
+        "CURRENT_AA",
+        "LastCNT",
+        "ADT_24"
     ]
 
     column_map = {
