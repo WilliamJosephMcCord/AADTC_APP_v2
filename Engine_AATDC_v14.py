@@ -72,7 +72,7 @@ STATE_CONFIGS = {
     },
     "DE": {
         "type": "shapefile",
-        "shapefile": BASE_DIR / "Delaware" / "Delaware.shp"
+        "shapefile": BASE_DIR / "Delaware" / "Deleware.shp"
     },
     "DC": {
         "type": "shapefile",
