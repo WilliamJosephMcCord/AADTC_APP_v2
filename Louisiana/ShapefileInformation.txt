@@ -1,0 +1,10 @@
+###################################################################################################
+LADOTD - Shapefile Information
+###################################################################################################
+ESRI Shapefiles use the dBASE file format to store attribute information of features. As so, dBASE
+field names impose a ten-character limitation. Due to this limitation, Shapefile field names may be
+truncated. Please refer to the data dictionary
+(https:///maps.dotd.la.gov/DataDictionary/Roads_N_Highways/metadata.Htm) for full field names, or
+download using the File Geodatabase option. More information and technical knowledge of this
+limitation can be found here: https://support.esri.com/en-us/knowledge-base/problem-field-names-of-
+an-exported-shapefile-are-trunca-000029101

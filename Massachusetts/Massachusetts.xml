@@ -1,0 +1,2518 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20240619</pubdate>
+                <title>TrafficInventory2024</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Abstract: The Massachusetts Department of Transportation Highway Division Traffic Inventory contains the spatial linework for all the public and a good portion of the private roadways in Massachusetts, along with roadway attributes covering the roadway classification, ownership, traffic volumes, and more.</abstract>
+            <purpose>Purpose: The Traffic Inventory is a GIS-based asset management system for the state's highway transportation system. As such, its strengths are in describing the configuration and condition of public roads and rights-of-way. It is not designed to support route-finding (e.g., shortest path applications), nor is it designed to support geocoding (although in theory intersection-based geocoding could be set up on it). It is part of the official documentation of the state road system and is used to prepare the yearly Highway Performance Monitoring System (HPMS) report to the Federal Highway Administration (FHWA).
+
+***Note: In 2023 many local roads were excluded because their AADT values are modeled and not counted. Due to popular demand, we have included these local roads with modeled values for the 2024 Traffic Inventory. These modeled counts can be distinguished through the field AADT Derivation = Modeled Count (25). We advise that any comparisons between the two years take this discrepancy into account and that any users are aware that the modeled values do not reflect actual AADT counts.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20230101</begdate>
+                    <enddate>20231231</enddate>
+                </rngdates>
+            </timeinfo>
+            <current>The geographical extent of this dataset is the state of Massachusetts and the temporal extent is the year 2023</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-73.521287</westbc>
+                <eastbc>-69.909655</eastbc>
+                <northbc>42.888311</northbc>
+                <southbc>41.232825</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>transportation</themekey>
+            </theme>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Traffic</themekey>
+                <themekey>AADT</themekey>
+                <themekey>Traffic Inventory</themekey>
+            </theme>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>This data is in the public domain and therefore can be used by anyone for any purpose. MassDOT shall not be held liable for any errors in this data. This includes errors of omission, commission, errors concerning the content of the data, and relative and positional accuracy of the data. This data cannot be construed to be a legal document. Primary sources from which this data was compiled must be consulted for verification of information contained in this data.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Massachusetts Department of Transportation Office of Transportation Planning GIS Services</cntorg>
+                    <cntper>Charles Major</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>physical</addrtype>
+                    <address>10 Park Plaza Suite 4150</address>
+                    <city>Boston</city>
+                    <state>MA</state>
+                    <postal>02116</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>617-571-3430</cntvoice>
+            </cntinfo>
+        </ptcontac>
+        <datacred>MassDOT Office of Transportation Planning, Central Transportation Planning Staff</datacred>
+        <native>Esri ArcGIS 13.1.0.41833</native>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>String</sdtstype>
+                <ptvctcnt>438493</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DBO.TrafficInventory</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Coordinates defining the features.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>route_id</attrlabl>
+                <attrdef>Unique identifier for contiguous sequence of road segments belonging to a logical route</attrdef>
+                <attrdefs>CTPS</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Route system abbreviation plus up to five-digit number plus space plus direction abbreviation.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>from_measure</attrlabl>
+                <attrdef>The measured length along the specified Route feature where this RoadInventory segment starts</attrdef>
+                <attrdefs>CTPS</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive real numbers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>to_measure</attrlabl>
+                <attrdef>The measured length along the Route feature where this RoadInventory segment ends</attrdef>
+                <attrdefs>CTPS</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive real numbers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Route_System</attrlabl>
+                <attrdef>Class of route</attrdef>
+                <attrdefs>CTPS</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>I</edomv>
+                                                
+                        <edomvd>Interstate</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>US</edomv>
+                                                
+                        <edomvd>US Highway</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>SR</edomv>
+                                                
+                        <edomvd>State Route</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>R</edomv>
+                                                
+                        <edomvd>Ramp</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>L</edomv>
+                                                
+                        <edomvd>Local Road</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>N</edomv>
+                                                
+                        <edomvd>Not a numbered route (Arterial and Collector)</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Route_Number</attrlabl>
+                <attrdef>The official route number designation; need not be exclusively numeric (146A, for example)</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Characters representing route numbers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Route_Direction</attrlabl>
+                <attrdef>The direction a route traverses. NB and EB are primary (inventory) direction routes. SB and WB are opposing (non-inventory) direction routes</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>NB</edomv>
+                                                
+                        <edomvd>Northbound</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>EB</edomv>
+                                                
+                        <edomvd>Eastbound</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>SB</edomv>
+                                                
+                        <edomvd>Southbound</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>WB</edomv>
+                                                
+                        <edomvd>Westbound</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>City</attrlabl>
+                <attrdef>1= Abington &amp; 351 = Yarmouth</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <rdom>
+                                                
+                        <rdommin>1</rdommin>
+                                                
+                        <rdommax>351</rdommax>
+                                            
+                    </rdom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>County</attrlabl>
+                <attrdef>County code: 1= Barnstable, 3 = Berkshire, 5 = Bristol, 7 = Dukes, 9 = Essex, 11 = Franklin, 13 = Hampden, 15 = Hampshire, 17 = Middlesex, 19 = Nantucket, 21 = Norfolk, 23 = Plymouth, 25 = Suffolk, 27 = Worcester</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Hwy_Dist</attrlabl>
+                <attrdef>Highway district</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <rdom>
+                                                
+                        <rdommin>1</rdommin>
+                                                
+                        <rdommax>6</rdommax>
+                                                
+                        <attrmres>1</attrmres>
+                                            
+                    </rdom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>RPA</attrlabl>
+                <attrdef>Regional Planning Agency</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>BRPC</edomv>
+                                                
+                        <edomvd>Berkshire Regional Planning Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>CCC</edomv>
+                                                
+                        <edomvd>Cape Cod Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>CMRPC</edomv>
+                                                
+                        <edomvd>Central Massachusetts Regional Planning Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>FRCOG</edomv>
+                                                
+                        <edomvd>Metropolitan Area Planning Council</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MAPC</edomv>
+                                                
+                        <edomvd>Metropolitan Area Planning Council</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MRPC</edomv>
+                                                
+                        <edomvd>Montachusett Regional Planning Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MVC</edomv>
+                                                
+                        <edomvd>Marthas Vineyard Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MVPC</edomv>
+                                                
+                        <edomvd>Merrimack Valley Planning Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>NMCOG</edomv>
+                                                
+                        <edomvd>Northern Middlesex Council of Governments</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>NPEDC</edomv>
+                                                
+                        <edomvd>Nantucket Planning and Economic Development Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>OCPC</edomv>
+                                                
+                        <edomvd>Old Colony Planning Council</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>PVPC</edomv>
+                                                
+                        <edomvd>Pioneer Valley Planning Commission</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>SRPEDD</edomv>
+                                                
+                        <edomvd>Southeastern Regional Planning and Economic Development District</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>RTA</attrlabl>
+                <attrdef>Regional Transit Authority</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>BRTA</edomv>
+                                                
+                        <edomvd>Berkshire Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>BAT</edomv>
+                                                
+                        <edomvd>Brockton Area Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>CATA</edomv>
+                                                
+                        <edomvd>Cape Ann Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>CCRTA</edomv>
+                                                
+                        <edomvd>Cape Cod Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>FRTA</edomv>
+                                                
+                        <edomvd>Franklin Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>GATRA</edomv>
+                                                
+                        <edomvd>Greater Attleboro Taunton Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>LRTA</edomv>
+                                                
+                        <edomvd>Lowell Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MBTA</edomv>
+                                                
+                        <edomvd>Massachusetts Bay Transportation Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MRTA</edomv>
+                                                
+                        <edomvd>Montachusetts Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>MVRTA</edomv>
+                                                
+                        <edomvd>Merrimack Valley Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>None</edomv>
+                                                
+                        <edomvd>Not covered by a regional transit authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>NRTA</edomv>
+                                                
+                        <edomvd>Nantucket Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>PVTA</edomv>
+                                                
+                        <edomvd>Pioneer Valley Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>SRTA</edomv>
+                                                
+                        <edomvd>Southeastern Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>VTA</edomv>
+                                                
+                        <edomvd>Vineyard Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>WRTA</edomv>
+                                                
+                        <edomvd>Worcester Regional Transit Authority</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MPO</attrlabl>
+                <attrdef>Metropolitan Planning Organization</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Berkshire</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Boston Region</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>Cape Cod</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>Central Massachusetts</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>Franklin</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>Martha's Vineyard</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>Merrimack Valley</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>Montachusett</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>Nantucket</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>Northern Middlesex</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>Old Colony</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>Pioneer Valley</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>Southeastern Massachusetts</edomvd>
+                                                
+                        <edomvds>Mass.gov</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Jurisdictn</attrlabl>
+                <attrdef>Jurisdiction</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Urban_Type</attrlabl>
+                <attrdef>Census-defined type of urbanization</attrdef>
+                <attrdefs>CTPS</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Large Urbanized Area</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Small Urbanized Area</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>Large Urban Cluster</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>Small Urban Cluster</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>Rural</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>F_F_Class</attrlabl>
+                <attrdef>Federal functional classification</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Interstate</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Principal Arterial - Other Freeways or Expressways</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>Principal Arterial - Other</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>Major Arterial</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>Major Collector</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>Minor Collector</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>Local</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NHS</attrlabl>
+                <attrdef>National Highway System status</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>0</edomv>
+                                                
+                        <edomvd>Not on NHS</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>NHS - Interstate</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>NHS - Strategic Defense Highway System (STRAHNET)</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>NHS - STRAHNET Connector</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>NHS - Other - One-way pair</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>NHS - Other truck route exclusion</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>NHS - Major Airport</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>NHS - Major Port Facility</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>NHS - Major Amtrak Station</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>NHS - Major Rail/Truck terminal</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>NHS - Major Intercity Bus Terminal</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>NHS - Major Public Transit or Multi-Modal Passenger Terminal</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>NHS - Major Pipeline Terminal</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>NHS - Major Ferry Terminal</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>14</edomv>
+                                                
+                        <edomvd>NHS - Other (not in above categories)</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>15</edomv>
+                                                
+                        <edomvd>NHS - Principal Arterial (MAP-21)</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Fd_Aid_Rd</attrlabl>
+                <attrdef>Federal Aid Eligible Road</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>0</edomv>
+                                                
+                        <edomvd>Not Eligible</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Interstate - NHS</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Other Road - NHS</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>SPT Eligible</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>STP Road - C15</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>St_Name</attrlabl>
+                <attrdef>Street Name</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Characters representing street names</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Control</attrlabl>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>0</edomv>
+                                                
+                        <edomvd>No control</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Full control</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Partial control</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Num_Lanes</attrlabl>
+                <attrdef>Number of travel lanes (for undivided roadways, number of lanes in both directions of travel, for divided roadways, number of lanes on the given segment only)</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Opp_Lanes</attrlabl>
+                <attrdef>Number of travel lanes in the opposite direction of a divided roadway</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Non-negative integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Facility</attrlabl>
+                <attrdef>Facility Type</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Mainline roadway</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Roundabout</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>Tunnel</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>Doubledeck</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>Rotary</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>Causeway</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>Simple Ramp/ Channelized Turning Lane</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>Ramp - NB/EB</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>Ramp - SB/WB</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>Collector - Distributor</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>Simple Ramp - Tunnel</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>Bicycle/ Pedestrian</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>Commercial</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>14</edomv>
+                                                
+                        <edomvd>Private Way</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Mile_Count</attrlabl>
+                <attrdef>Describes whether the segments length is counted towards the official statewide road centerline mileage</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>0</edomv>
+                                                
+                        <edomvd>Mileage Not Counted for Funding</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Mileage Counted for Funding</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>T_Exc_Type</attrlabl>
+                <attrdef>Truck Exclusion Type</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Open to all vehicles</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>All vehicles over 2.5 tons excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>All vehicles over 3 tons excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>All vehicles over 5 tons excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>All vehicles over 10 tons excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>All vehicles over 2000 pounds excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>All vehicles over 28 feet in length excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>Gross vehicle weight over 18 tons and greater than 2 axles excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>Gross vehicle weight over 30 tons and greater than 4 axles excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>Commercial vehicles over 5 tons carry capacity excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>All vehicles over 20 tons excluded</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>Hazardous Truck Route</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>Cambridge Overnight Exclusions</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>T_Exc_Time</attrlabl>
+                <attrdef>Truck Exclusion Time</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>None</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>24 Hours, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>5AM to 8 PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>6AM to 6PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>6AM to 7PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>6AM to 10PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>7AM to 6PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>7AM to 11PM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>4PM to 6PM</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>6PM to 6AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>7PM to 7AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>8PM to 6AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>8PM to 7AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>14</edomv>
+                                                
+                        <edomvd>9PM to 6AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>15</edomv>
+                                                
+                        <edomvd>9PM to 7AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>16</edomv>
+                                                
+                        <edomvd>10PM to 6AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>17</edomv>
+                                                
+                        <edomvd>11PM to 6AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>18</edomv>
+                                                
+                        <edomvd>11PM to 6AM, NB Only, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>19</edomv>
+                                                
+                        <edomvd>11PM to 7AM, 7 Days</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>20</edomv>
+                                                
+                        <edomvd>8AM to 930AM and 2PM to 330PM, School Days Only</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>AADT</attrlabl>
+                <attrdef>Average Annual Daily Traffic</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Non-negative integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>AADT_Year</attrlabl>
+                <attrdef>Year of ADT collection</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Positive integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>AADT_Deriv</attrlabl>
+                <attrdef>AADT derivation</attrdef>
+                <attrdefs>MassDOT</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>0</edomv>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>1</edomv>
+                                                
+                        <edomvd>Derived from counts collected on or adjacent to the section during the current year</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>2</edomv>
+                                                
+                        <edomvd>Derived from factoring counts from the previous year count-base AADT that is less than three years old</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>3</edomv>
+                                                
+                        <edomvd>Derived from count data that is three or more years old</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>4</edomv>
+                                                
+                        <edomvd>Derived from an estimate</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>5</edomv>
+                                                
+                        <edomvd>Working code for principal arterial counting program</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>6</edomv>
+                                                
+                        <edomvd>MassDOT Highway Special Count</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>7</edomv>
+                                                
+                        <edomvd>RPA Count</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>8</edomv>
+                                                
+                        <edomvd>Other Count</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>9</edomv>
+                                                
+                        <edomvd>Carried forward from most recent of previous 3 years</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>10</edomv>
+                                                
+                        <edomvd>Calculated from Seasonal Class Factors</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>11</edomv>
+                                                
+                        <edomvd>Calculated from Class Distribution Factors</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>12</edomv>
+                                                
+                        <edomvd>Doubled from single direction</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>13</edomv>
+                                                
+                        <edomvd>HPMS Estimation Routine Default Value</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>14</edomv>
+                                                
+                        <edomvd>Grown from Prior Year HPMS Network</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>23</edomv>
+                                                
+                        <edomvd>AADT synchronized with other stations on the segment</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>24</edomv>
+                                                
+                        <edomvd>MPO Count</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>25</edomv>
+                                                
+                        <edomvd>Modeled Count</edomvd>
+                                                
+                        <edomvds>MassDOT</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>K_Factor</attrlabl>
+                <attrdef>The design hour volume as a percentage of AADT.</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>D_Factor</attrlabl>
+                <attrdef>Directional Factor</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Av_Pct_SUT</attrlabl>
+                <attrdef>Single-Unit Truck and Bus AADT</attrdef>
+                <attrdomv>
+                                        
+                    <udom>Non-negative integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Av_Pct_CT</attrlabl>
+                <attrdef>Combination Truck AADT</attrdef>
+                <attrdefs>MS2</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Non-negative integers</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Record_ID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>QC_Code</attrlabl>
+                <attrdef>MS2 Code for assigning AADT values</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DH_Pct_SUT</attrlabl>
+                <attrdef>Percent Design Hour Single-Unit Trucks and Buses</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DH_Pct_CT</attrlabl>
+                <attrdef>Percent Design Hour Combination Trucks</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Source</attrlabl>
+                <attrdef>Source of AADT</attrdef>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>A</edomv>
+                                                
+                        <edomvd>State or local government agency: Actual count</edomvd>
+                                                
+                        <edomvds>MS2</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>B</edomv>
+                                                
+                        <edomvd>State or local government agency: Other count method</edomvd>
+                                                
+                        <edomvds>MS2</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>C</edomv>
+                                                
+                        <edomvd>Private business or non-governmental agency: Actual count</edomvd>
+                                                
+                        <edomvds>MS2</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>D</edomv>
+                                                
+                        <edomvd>Private business or non-governmental agency: Other count method</edomvd>
+                                                
+                        <edomvds>MS2</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>E</edomv>
+                                                
+                        <edomvd>Data is developed or acquired using a method not identified in A, B, C, or D</edomvd>
+                                                
+                        <edomvds>MS2</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Year_SUT</attrlabl>
+                <attrdef>Year of Single-Unit Trucks and Buses AADT</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Year_CT</attrlabl>
+                <attrdef>Year of Combination Trucks AADT</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TestDate</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Local_Priority</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Length</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Source_SUT</attrlabl>
+                <attrdef>Source of Single-Unit Trucks and Buses AADT</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Source_CT</attrlabl>
+                <attrdef>Source of Combination Trucks AADT</attrdef>
+                <attrdefs>MS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Local_ID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.STLength()</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20250924</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Massachusetts Department of Transportation Office of Transportation Planning GIS Services</cntorg>
+                    <cntper>Charles Major</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>physical</addrtype>
+                    <address>10 Park Plaza Suite 4150</address>
+                    <city>Boston</city>
+                    <state>MA</state>
+                    <postal>02116</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>617-571-3430</cntvoice>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
