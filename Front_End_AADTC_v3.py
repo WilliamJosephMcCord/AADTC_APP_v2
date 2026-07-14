@@ -53,8 +53,8 @@ st.divider()
 st.subheader("Other State Traffic Websites")
 
 st.write(
-    "Use these official state traffic websites for states that are "
-    "not currently included in the search tool."
+    "Use these official state traffic websites for states that do "
+    "not currently provide the data needed for this project."
 )
 
 other_traffic_websites = {
