@@ -48,8 +48,6 @@ if st.button("Search"):
         except Exception as error:
             st.error(f"Unable to create the map: {error}")
 
-# This section appears directly below the Search button initially.
-# When the map loads, the map pushes this section below it.
 st.divider()
 
 st.subheader("Other State Traffic Websites")
