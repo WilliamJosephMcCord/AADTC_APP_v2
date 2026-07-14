@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <title>Annual Average Daily Traffic Locations Current in Minnesota</title>
+                <pubinfo>
+                    <publish>Minnesota Department of Transportation</publish>
+                </pubinfo>
+                <onlink>https://gis.data.mn.gov/datasets/mndot::annual-average-daily-traffic-count-locations-current-in-minnesota/about</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>AADT represents current (most recent) Annual Average Daily Traffic on sampled road systems. This information is displayed using the Traffic Count Locations Active feature class as of the annual HPMS freeze in January. Historical AADT is found in another table. Please note that updates to this dataset are on an annual basis, therefore the data may not match ground conditions or may not be available for new roadways.
+
+Resource Contact: Traffic Forecasting &amp; Analysis (TFA), https://www.dot.state.mn.us/tda/contacts.html#TFA</abstract>
+            <purpose>Determine general estimates of location specific, annual average daily traffic (AADT) on various route systems to meet FHWA annual reporting and assist in the annual allocation of state aid to local government for roadway maintenance and construction. Counts are taken on portions of the system each year so complete coverage for a given jurisdiction is generally accomplished on a two, four, six, or twelve year cycle. More information about the Traffic Volume Program can be found at: http://www.dot.state.mn.us/traffic/data/</purpose>
+            <supplinf>State of Minnesota</supplinf>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>Annually</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-97.50897</westbc>
+                <eastbc>-89.02899</eastbc>
+                <northbc>49.652543</northbc>
+                <southbc>43.192405</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>ISO 19115 Topic Category</themekt>
+                <themekey>Traffic Volume</themekey>
+                <themekey>AADT</themekey>
+                <themekey>Short Counts</themekey>
+                <themekey>Traffic Counts</themekey>
+                <themekey>Best Source SDW</themekey>
+                <themekey>Minnesota</themekey>
+                <themekey>MnDOT</themekey>
+                <themekey>MN</themekey>
+                <themekey>Official MnDOT</themekey>
+                <themekey>Traffic</themekey>
+                <themekey>Transportation</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Minnesota</placekey>
+            </place>
+        </keywords>
+        <accconst>None.</accconst>
+        <useconst>None. Please check sources, scale, accuracy, currentness and other available information. Please confirm that you are using the most recent copy of both data and metadata.  Acknowledgement of the publisher would be appreciated.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Minnesota Department of Transportation</cntorg>
+                    <cntper>NA</cntper>
+                </cntorgp>
+                <cntpos>MnDOT, Office of Transportation Management, Traffic Forecasting and Analysis Section</cntpos>
+                <cntaddr>
+                    <addrtype>unknown</addrtype>
+                    <address>395 John Ireland Blvd.</address>
+                    <city>Saint Paul</city>
+                    <state>MN</state>
+                    <postal>55155</postal>
+                </cntaddr>
+                <cntvoice>0</cntvoice>
+                <cntfax>0</cntfax>
+                <cntemail>trafficforecastanalysis.dot@state.mn.us</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <browse>
+            <browsen>http://www.dot.state.mn.us/traffic/data/index.html</browsen>
+        </browse>
+        <crossref>
+            <citeinfo>
+                <title>Annual Average Daily Traffic Locations Current in Minnesota</title>
+            </citeinfo>
+        </crossref>
+    </idinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Annual Average Daily Traffic Count Locations in Minnesota</enttypl>
+                <enttypds>MnDOT</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>LOCATION_ID</attrlabl>
+                <attrdef>Unique site identifier within the Traffic Monitoring Program.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FROM_DATE</attrlabl>
+                <attrdef>Date the record began.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TO_DATE</attrlabl>
+                <attrdef>Date the record ends.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ROUTE_LABEL</attrlabl>
+                <attrdef>Route label from the MnDOT LRS; updated via API as needed; where I=Interstate Highway, US=US Highway, MN=MN State Highway, CSAH=County State Aid Highway, CR=County Road, MSAS=Municipal State Aid Street.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STREET_NAME</attrlabl>
+                <attrdef>Street name from the MnDOT LRS; updated via API as needed.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LOCATION_DESCRIPTION</attrlabl>
+                <attrdef>Description of the location on a traffic segment where a count was taken.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COUNTY</attrlabl>
+                <attrdef>County in which the count is located.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COMMUNITY</attrlabl>
+                <attrdef>City in which the count is located.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>JURISDICTION</attrlabl>
+                <attrdef>Entity that has legal ownership of a roadway.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COLLECTION_AREA</attrlabl>
+                <attrdef>Agency, region, or area assigned to collect count data (e.g., MnDOT district, county, city).</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COLLECTION_GROUP</attrlabl>
+                <attrdef>Type of count needed for the location (e.g., volume, classification, length, growth).</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COLLECTION_CYCLE</attrlabl>
+                <attrdef>Count cycle assigned to the location; used for scheduling when updated counts are needed.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CURRENT_YEAR</attrlabl>
+                <attrdef>Year current value was collected.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DATA_TYPE</attrlabl>
+                <attrdef>Category of traffic data based on how it was derived, sourced, or calculated.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AADT_COMMENTS</attrlabl>
+                <attrdef>Comments on how the traffic data value was produced.</attrdef>
+                <attrdefs>MnDOT</attrdefs>
+            </attr>
+        </detailed>
+        <overview>
+            <eaover>The AADT data is intended to represent the collection of all public roads in the state for which traffic data was collected.</eaover>
+        </overview>
+    </eainfo>
+    <metainfo>
+        <metd>20260702</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Minnesota Department of Transportation</cntorg>
+                    <cntper>NA</cntper>
+                </cntorgp>
+                <cntpos>MnDOT, Office of Transportation Management, Traffic Forecasting and Analysis Section</cntpos>
+                <cntaddr>
+                    <addrtype>unknown</addrtype>
+                    <address>395 John Ireland Blvd.</address>
+                    <city>Saint Paul</city>
+                    <state>MN</state>
+                    <postal>55155</postal>
+                </cntaddr>
+                <cntvoice>0</cntvoice>
+                <cntfax>0</cntfax>
+                <cntemail>trafficforecastanalysis.dot@state.mn.us</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
