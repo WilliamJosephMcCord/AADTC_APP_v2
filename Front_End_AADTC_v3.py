@@ -12,7 +12,7 @@ state = st.selectbox(
         "FL", "GA", "ID", "IL", "IN", "KY", "LA", "MA",
         "MD", "ME", "MI", "MN", "MS", "NC", "NH", "NJ",
         "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC",
-        "SD", "TN", "TX", "VA", "VT", "WA", "WI", "WV"
+        "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV"
     ]
 )
 
@@ -66,7 +66,6 @@ other_traffic_websites = {
     "NE": "https://gis.ne.gov/portal/apps/experiencebuilder/experience/?id=0c2801cfc8884cdb8a76269b5f9e21f1",
     "NM": "https://experience.arcgis.com/experience/80e6622cd81f48f788772b737337b9fb",
     "ND": "https://gis.dot.nd.gov/external/ge_html/?viewer=ext_transinfo",
-    "UT": "https://data-uplan.opendata.arcgis.com/datasets/52da935542464cdaa29fc872a489b580_13/explore?location=39.489984%2C-111.577404%2C6"
 }
 
 for state_code, website_url in other_traffic_websites.items():
