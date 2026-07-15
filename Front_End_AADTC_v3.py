@@ -61,11 +61,13 @@ other_traffic_websites = {
     "AL": "https://aldotgis.dot.state.al.us/TDMPublic/",
     "HI": "https://experience.arcgis.com/experience/3b630bae39bd4d4e824f55d854450a84/page/Traffic-Volume",
     "IA": "https://www.arcgis.com/apps/mapviewer/index.html?webmap=8304ce251dac4c5cbde64c04a4a46c4b",
+    "KA": "https://www.ksdot.gov/home/showpublisheddocument/12894/638947348840130000"
     "MO": "https://www.modot.org/traffic-volume-maps",
     "MT": "https://mdt.maps.arcgis.com/apps/mapviewer/index.html?webmap=8a0308abed8846b6b533781e7a96eedd",
     "NE": "https://gis.ne.gov/portal/apps/experiencebuilder/experience/?id=0c2801cfc8884cdb8a76269b5f9e21f1",
     "NM": "https://experience.arcgis.com/experience/80e6622cd81f48f788772b737337b9fb",
     "ND": "https://gis.dot.nd.gov/external/ge_html/?viewer=ext_transinfo",
+    "WY": "https://apps.wyoroad.info/itsm/index.html"
 }
 
 for state_code, website_url in other_traffic_websites.items():
