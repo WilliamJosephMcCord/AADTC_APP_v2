@@ -51,7 +51,7 @@ if not GOOGLE_MAPS_BROWSER_KEY:
 
 
 # FILE PATHS
-EXCEL_FILE = BASE_DIR / "AADTC_annualized_statistics_new.xlsx"
+EXCEL_FILE = BASE_DIR / "AADT_Excel.xlsx"
 
 OUTPUT_MAP = BASE_DIR / "traffic_map.html"
 
